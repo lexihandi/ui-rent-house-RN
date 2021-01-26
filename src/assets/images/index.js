@@ -3,7 +3,7 @@ import ImageBedroom from './de_kezia.png';
 import ImageProfile from './de_kezia.png';
 import ImageHillHouse from './hill_house.png';
 import ImageModernHouse from './modern_house.png';
-import ImageModernHouseDetail from './modern_house_detail.png.png';
+import ImageModernHouseDetail from './modern_house_detail.png';
 import ImageSwimmingPool from './swimming_pool.png';
 import ImageTriangleHouse from './triangle_house.png';
 import ImageWhiteHouse from './white_house.png';
