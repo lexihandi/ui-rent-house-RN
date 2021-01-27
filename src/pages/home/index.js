@@ -11,7 +11,7 @@ import {
   ImageHillHouse,
 } from '../../assets';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <ScrollView style={styles.page} showsVerticalScrollIndicator={false}>
       <Header />
@@ -22,7 +22,12 @@ const Home = () => {
           horizontal
           style={styles.banner}
           showsHorizontalScrollIndicator={false}>
-          <Banner image={ImageModernHouse} title="Modern House" loc="Bandung" />
+          <Banner
+            image={ImageModernHouse}
+            title="Modern House"
+            loc="Bandung"
+            onPress={() => navigation.navigate('Detail')}
+          />
           <Banner image={ImageWhiteHouse} title="White House" loc="Jakarta" />
         </ScrollView>
       </View>

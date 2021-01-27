@@ -4,9 +4,9 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {IconRatings} from '../../assets';
 import {fonts} from '../../utils';
 
-const Banner = ({image, title, loc}) => {
+const Banner = ({image, title, loc, onPress}) => {
   return (
-    <TouchableOpacity style={styles.wrapper}>
+    <TouchableOpacity style={styles.wrapper} onPress={onPress}>
       <Image source={image} style={styles.img} />
       <View style={styles.text}>
         <View>

@@ -7,18 +7,22 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import {Agent, Button, Facilities} from '../../components';
 import {IconBack, IconRatings, ImageModernHouseDetail} from '../../assets';
 import {colors, fonts} from '../../utils';
 
-const Detail = () => {
+const Detail = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <Image source={ImageModernHouseDetail} style={styles.image} />
-      <TouchableOpacity>
-        <IconBack style={styles.icon} />
+      <StatusBar backgroundColor="#f8f8ff" barStyle="dark-content" />
+      <TouchableOpacity
+        style={styles.icon}
+        onPress={() => navigation.navigate('Home')}>
+        <IconBack />
       </TouchableOpacity>
+      <Image source={ImageModernHouseDetail} style={styles.image} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.wrapper}>
           <View style={styles.wrapTitle}>
@@ -53,10 +57,21 @@ const Detail = () => {
 export default Detail;
 
 const styles = StyleSheet.create({
-  page: {backgroundColor: 'black', flex: 1},
-  icon: {position: 'absolute', top: 0, left: 0},
-  image: {width: 420, height: 300},
-  wrapper: {padding: 20},
+  page: {
+    flex: 1,
+  },
+  icon: {position: 'absolute', top: 20, left: 20, zIndex: 10},
+  image: {width: 420, height: 315, position: 'absolute'},
+  wrapper: {
+    padding: 20,
+    marginBottom: 5,
+    zIndex: 10,
+    backgroundColor: colors.background,
+    top: 280,
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    position: 'relative',
+  },
   wrapTitle: {
     flexDirection: 'row',
     alignItems: 'center',
