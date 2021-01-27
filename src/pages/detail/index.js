@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import {Agent, Button} from '../../components';
+import {Agent, Button, Facilities} from '../../components';
 import {IconBack, IconRatings, ImageModernHouseDetail} from '../../assets';
 import {colors, fonts} from '../../utils';
 
@@ -19,8 +19,8 @@ const Detail = () => {
         <IconBack style={styles.icon} />
       </TouchableOpacity>
       <Image source={ImageModernHouseDetail} style={styles.image} />
-      <View style={styles.wrapper}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.wrapper}>
           <View style={styles.wrapTitle}>
             <View>
               <Text style={styles.title}>Modern House</Text>
@@ -28,9 +28,11 @@ const Detail = () => {
             </View>
             <IconRatings />
           </View>
-          <Text>Listing Agent</Text>
+          <Text style={styles.text}>Listing Agent</Text>
           <Agent />
-          <Text style={styles.descTitle}>Description</Text>
+          <Text style={styles.text}>House Facilities</Text>
+          <Facilities />
+          <Text style={styles.text}>Description</Text>
           <Text style={styles.desc}>
             Luxury homes at affordable prices with Bandung's hilly atmosphere.
             Located in a strategic location, flood free.
@@ -42,8 +44,8 @@ const Detail = () => {
             </View>
             <Button />
           </View>
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -67,8 +69,15 @@ const styles = StyleSheet.create({
   },
   loc: {
     fontFamily: fonts.primary[400],
-    fontSize: 18,
+    fontSize: 16,
     color: colors.text.secondary,
+  },
+  text: {
+    fontFamily: fonts.primary[600],
+    fontSize: 18,
+    color: colors.text.primary,
+    marginTop: 20,
+    marginBottom: 10,
   },
   descTitle: {
     fontFamily: fonts.primary[600],

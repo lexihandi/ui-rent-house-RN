@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import ImageBedroom from './de_kezia.png';
+import ImageBedroom from './bedroom.png';
 import ImageProfile from './de_kezia.png';
 import ImageHillHouse from './hill_house.png';
 import ImageModernHouse from './modern_house.png';
