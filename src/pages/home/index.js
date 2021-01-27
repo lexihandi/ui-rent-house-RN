@@ -2,12 +2,18 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {colors, fonts} from '../../utils';
-import {Banner, Header, Input} from '../../components';
-import {ImageModernHouse, ImageWhiteHouse} from '../../assets';
+import {Banner, Header, Input, Content} from '../../components';
+import {
+  ImageModernHouse,
+  ImageTriangleHouse,
+  ImageWhiteHouse,
+  ImageWoodenHouse,
+  ImageHillHouse,
+} from '../../assets';
 
 const Home = () => {
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page} showsVerticalScrollIndicator={false}>
       <Header />
       <Text style={styles.title}>Find Your Perfect Place!</Text>
       <Input placeholder="Find your dream home" />
@@ -20,7 +26,11 @@ const Home = () => {
           <Banner image={ImageWhiteHouse} title="White House" loc="Jakarta" />
         </ScrollView>
       </View>
-    </View>
+      <Text style={styles.text}>Recommended For You</Text>
+      <Content image={ImageWoodenHouse} title="Wooden House" loc="Bandung" />
+      <Content image={ImageTriangleHouse} title="Triangle House" loc="Bogor" />
+      <Content image={ImageHillHouse} title="Hill House" loc="Makassar" />
+    </ScrollView>
   );
 };
 
@@ -36,4 +46,10 @@ const styles = StyleSheet.create({
     maxWidth: 260,
   },
   banner: {flexDirection: 'row'},
+  text: {
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
+    fontSize: 18,
+    padding: 20,
+  },
 });

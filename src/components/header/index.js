@@ -1,13 +1,13 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {IconNavbar} from '../../assets';
 
 const Header = () => {
   return (
-    <View style={styles.wrapper}>
+    <TouchableOpacity style={styles.wrapper}>
       <IconNavbar />
-    </View>
+    </TouchableOpacity>
   );
 };
 

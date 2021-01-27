@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {IconRatings, ImageModernHouse} from '../../assets';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {IconRatings} from '../../assets';
 import {fonts} from '../../utils';
 
 const Banner = ({image, title, loc}) => {
   return (
-    <View style={styles.wrapper}>
+    <TouchableOpacity style={styles.wrapper}>
       <Image source={image} style={styles.img} />
       <View style={styles.text}>
         <View>
@@ -15,7 +15,7 @@ const Banner = ({image, title, loc}) => {
         </View>
         <IconRatings />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

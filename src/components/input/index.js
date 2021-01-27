@@ -8,11 +8,10 @@ const Input = ({placeholder, onChangeText}) => {
   return (
     <View style={styles.wrapper}>
       <TextInput
+        underlineColorAndroid="transparent"
         style={styles.title}
         placeholder={placeholder}
-        onChangeText={onChangeText}
-        placeholderTextColor={'#AFAFAF'}
-        underlineColorAndroid="transparent"
+        placeholderTextColor="#AFAFAF"
       />
       <TouchableOpacity>
         <IconSearch />
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     justifyContent: 'space-between',
     alignItems: 'center',
-    elevation: 5,
+    elevation: 1,
     marginHorizontal: 20,
     paddingHorizontal: 20,
   },
