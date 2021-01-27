@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {colors, fonts} from '../../utils';
-import {Header, Input} from '../../components';
+import {Banner, Header, Input} from '../../components';
+import {ImageModernHouse, ImageWhiteHouse} from '../../assets';
 
 const Home = () => {
   return (
@@ -10,6 +11,15 @@ const Home = () => {
       <Header />
       <Text style={styles.title}>Find Your Perfect Place!</Text>
       <Input placeholder="Find your dream home" />
+      <View>
+        <ScrollView
+          horizontal
+          style={styles.banner}
+          showsHorizontalScrollIndicator={false}>
+          <Banner image={ImageModernHouse} title="Modern House" loc="Bandung" />
+          <Banner image={ImageWhiteHouse} title="White House" loc="Jakarta" />
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -25,4 +35,5 @@ const styles = StyleSheet.create({
     padding: 20,
     maxWidth: 260,
   },
+  banner: {flexDirection: 'row'},
 });

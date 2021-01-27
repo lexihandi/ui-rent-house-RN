@@ -11,6 +11,7 @@ export const colors = {
   text: {
     primary: mainColors.Blue,
     secondary: mainColors.grey,
+    white: mainColors.white,
   },
   tertinary: mainColors.purple,
 };
