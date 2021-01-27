@@ -5,6 +5,7 @@ import IconCall from './Call.svg';
 import IconMessage from './Messange.svg';
 import IconRatings from './Ratings.svg';
 import IconForward from './Vector 705 (Stroke).svg';
+import IconBack from './Back Button.svg';
 
 export {
   IconNavbar,
@@ -13,4 +14,5 @@ export {
   IconMessage,
   IconRatings,
   IconForward,
+  IconBack,
 };
