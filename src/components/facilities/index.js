@@ -27,17 +27,24 @@ export default Facilities;
 
 const styles = StyleSheet.create({
   wrapper: {flexDirection: 'row'},
-  content: {borderRadius: 15, backgroundColor: 'black'},
+  content: {
+    borderRadius: 15,
+    backgroundColor: colors.background,
+    marginRight: 10,
+    alignContent: 'center',
+    elevation: 1,
+  },
   image: {
     width: 120,
     height: 100,
-    alignSelf: 'center',
+    borderTopRightRadius: 15,
+    borderTopLeftRadius: 15,
   },
   title: {
     fontFamily: fonts.primary[500],
     fontSize: 12,
     color: colors.text.primary,
     textAlign: 'center',
-    marginTop: 10,
+    padding: 5,
   },
 });

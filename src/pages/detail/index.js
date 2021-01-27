@@ -15,10 +15,10 @@ import {colors, fonts} from '../../utils';
 const Detail = () => {
   return (
     <View style={styles.page}>
+      <Image source={ImageModernHouseDetail} style={styles.image} />
       <TouchableOpacity>
         <IconBack style={styles.icon} />
       </TouchableOpacity>
-      <Image source={ImageModernHouseDetail} style={styles.image} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.wrapper}>
           <View style={styles.wrapTitle}>
@@ -53,8 +53,8 @@ const Detail = () => {
 export default Detail;
 
 const styles = StyleSheet.create({
-  page: {backgroundColor: colors.background, flex: 1},
-  icon: {position: 'absolute', top: 0, left: 0, zIndex: 10},
+  page: {backgroundColor: 'black', flex: 1},
+  icon: {position: 'absolute', top: 0, left: 0},
   image: {width: 420, height: 300},
   wrapper: {padding: 20},
   wrapTitle: {
@@ -88,8 +88,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[400],
     fontSize: 14,
     color: colors.text.secondary,
+    marginBottom: 40,
   },
-  booking: {flexDirection: 'row', justifyContent: 'space-between'},
+  booking: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   priceTitle: {
     fontFamily: fonts.primary[600],
     fontSize: 14,
