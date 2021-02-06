@@ -23,8 +23,8 @@ const Detail = ({navigation}) => {
         <IconBack />
       </TouchableOpacity>
       <Image source={ImageModernHouseDetail} style={styles.image} />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.wrapper}>
+      <View style={styles.wrapper}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.wrapTitle}>
             <View>
               <Text style={styles.title}>Modern House</Text>
@@ -48,8 +48,8 @@ const Detail = ({navigation}) => {
             </View>
             <Button />
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -61,16 +61,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {position: 'absolute', top: 20, left: 20, zIndex: 10},
-  image: {width: 420, height: 315, position: 'absolute'},
+  image: {width: 420, height: 315, position: 'relative'},
   wrapper: {
     padding: 20,
     marginBottom: 5,
     zIndex: 10,
     backgroundColor: colors.background,
-    top: 280,
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
-    position: 'relative',
+    position: 'absolute',
+    top: 280,
   },
   wrapTitle: {
     flexDirection: 'row',
